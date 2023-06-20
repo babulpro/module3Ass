@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+<body>
+    <div class="container w-1/2  m-auto shadow-lg  h-96 flex items-center justify-center  bg-slate-100 pt-10 px-5 ">
+         <h1 id="name1" class="p-2 bg-slate-300 text-center rounded-sm  mr-2"></h1>
+         <h1 id="name2" class="p-2 bg-slate-300 text-center rounded-sm  "></h1>
+    </div>
+
+    
+    <script>
+    
+//     5.Navigator Object:
+
+
+// a. Write a JavaScript function that detects the user's browser name and version using the navigator object.
+
+
+// b. Implement the function to display the user's browser name and version.
+
+
+
+ 
+function detectChromeBrowser() {
+    return {
+      name:navigator.appName,
+
+      version: navigator.appVersion
+    };
+  }
+
+
+ let  userBrowser = detectChromeBrowser();
+let {name,version} =userBrowser
+console.log(userBrowser.version);
+
+document.getElementById("name1").innerHTML =`The name of the browser is ${name}`
+
+
+document.getElementById("name2").innerHTML =`The version of the browser is ${version}`;
+
+ 
+   
+
+    </script>
+</body>
+</html>

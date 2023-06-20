@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+<body>
+    <div class="container w-1/2  m-auto shadow-lg  h-96  relative  text-center  bg-slate-100 pt-10 px-5 ">
+        <div id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quos dolor fuga.</div>
+
+       <div>
+        <button class="absolute bottom-10 left-7 border bg-slate-800 rounded-md text-white uppercase py-2 px-5" onclick="changOnCLick()">Click Here </button>
+       </div>
+      
+   </div>
+
+   <script>
+   
+  
+// 8.HTML DOM Document:
+
+
+// a. Create a webpage with a button and a paragraph element.
+
+
+// b. Implement a JavaScript function that changes the text content of the paragraph element to "Button Clicked!" when the button is clicked.
+
+function changOnCLick(){
+    let para = document.getElementById("para")
+    para.textContent = "Button Clicked" 
+     
+}
+
+
+   </script>
+    
+</body>
+</html>

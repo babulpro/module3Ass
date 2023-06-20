@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/output.css">
+    <style>
+         
+    </style>
+</head>
+<body>
+    <div class="container w-1/2 m-auto shadow-lg h-60 relative text-center bg-slate-100 pt-10 px-5 mb-5">
+        <div id="para">
+            <ul id="list"></ul>
+        </div>
+
+        <div>
+         <button class="absolute bottom-10 left-1/2 border bg-slate-800 rounded-md text-white uppercase py-2 px-5" id="btn" onclick="ceateUl()">Click Here </button>
+        </div>
+   </div>
+
+   <div class="container w-1/2 m-auto shadow-lg h-60 relative text-center bg-slate-100 pt-10 px-5">
+    <div id="para">
+        <ul id="list"></ul>
+    </div>
+
+    <div>
+        <ul id="list2">
+
+        </ul>
+        <input class="bg-black text-white rounded-md py-2 px-3 w-full " placeholder="Enter the list item" type="text" name="" id="inp">
+     <button class="absolute bottom-10 left-7 border bg-slate-800 rounded-md text-white uppercase py-2 px-5" id="btn" onclick="update()">Click Here </button>
+    </div>
+</div>
+
+   <script>
+
+    function update(){
+        let ul = document.getElementById('list2')
+        let value = document.getElementById('inp').value
+        let li = document.createElement('li')
+        li.innerHTML = value;
+        document.getElementById('inp').value =" "
+        ul.appendChild(li)
+    }
+//     11.Create Element & Append Element:
+
+
+// a. Create a webpage with an empty unordered list (<ul>).
+
+
+// b. Implement a JavaScript function that dynamically creates five list items (<li>) with sequential numbers (1 to 5) and appends them to the unordered list.
+
+
+
+function ceateUl(){
+    let ul = document.getElementById('list')
+    for(let i=1;i<=5;i++){
+    let li = document.createElement('li')
+  
+        li.innerText = (i) 
+    
+    ul.appendChild(li)
+
+    }
+}
+
+
+   </script>
+    
+</body>
+</html>

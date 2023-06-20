@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+<body>
+    <div class="container w-1/2  m-auto shadow-lg  h-96   bg-slate-100 pt-10 px-5 relative">
+        <h1 id="name1" class="p-2  text-center rounded-sm  mr-2"></h1>
+        <button class="absolute left-1/2 bottom-2 bg-slate-400 p-2 rounded-md" onclick="getCurrentLocation()">click here</button>
+         
+
+    </div>
+
+    <script>
+        // 6.Geolocation:
+
+
+            // a. Implement a JavaScript function that retrieves the user's current location (latitude and longitude) using the geolocation API.
+
+
+
+            function getCurrentLocation() {
+                 if (navigator.geolocation) {
+
+                     navigator.geolocation.getCurrentPosition(
+                         function(position) {
+                                const latitude = position.coords.latitude;
+                                const longitude = position.coords.longitude;
+                                document.getElementById('name1').textContent =  ` my altitude is ${latitude} and my longitude is ${longitude}`
+                             
+                         },
+
+              function(error) {
+              return('Error:', error.message);
+                  }
+              );
+
+              } else {
+              return('Geolocation is not   supported by this browser.');
+            }
+            }
+
+            
+
+              
+           
+        //     navigator.geolocation.getCurrentPosition(function(position){
+        //     let latitude = position.coords.latitude;
+        //     let longitude = position.coords.longitude
+        //    document.getElementById('name1').textContent =  ` my altitude is ${latitude} and my longitude is ${longitude}`
+        //   })
+         
+          
+    </script>
+
+</body>
+</html>

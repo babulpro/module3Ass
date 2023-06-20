@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+<body>
+
+    <div class="container w-screen h-screen flex justify-center items-center">
+        <div id="para" class="w-96 h-96 bg-slate-300 shadow-xl rounded-xl grid grid-rows-col">
+          <div class="mt-12 flex justify-center">
+            <h1 id="dayOfWeekText">
+               
+            </h1>
+          </div>
+      
+          <div class="mt-12 flex justify-center">
+            <form action="#">
+              <input class="rounded-md mr-3 bg-slate-600   px-3 border border-slate-950 " type="date" name="name" id="dat">
+              <button type="submit" class="border capitalize py-1 px-4 bg-slate-800 border-red-400 text-white rounded-xl" id="findDay">Find Day</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+
+
+    <script>
+
+
+<!-- // 1.Date Object:
+
+
+// a. Create a function that takes a date in the format "YYYY-MM-DD" as a parameter and returns the day of the week for that date. The function should use the Date object.
+
+// b. Implement the function to display the day of the week for the current date. -->
+ 
+
+
+function getDayOfWeek(dateString) {
+  var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var date = new Date(dateString);
+  var dayIndex = date.getDay();
+  return daysOfWeek[dayIndex];
+}
+
+
+      document.getElementById("findDay").addEventListener("click", function(event) {
+             event.preventDefault(); 
+
+      
+         var selectedDate =  document.getElementById("dat").value;
+
+          if (selectedDate) {
+                 var dayOfWeek = getDayOfWeek(selectedDate);
+                 document.getElementById("dayOfWeekText").textContent = dayOfWeek;
+                              } 
+        else {
+                 alert("Please select a date");
+                 }
+            });
+
+
+
+    </script>
+
+
+    
+</body>
+</html>

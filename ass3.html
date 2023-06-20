@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+<body>
+    <div class="container w-1/2  m-auto shadow-lg  h-96   bg-slate-100 pt-10 px-5 ">
+        <h1 id="res" class="mt-10 text-2xl capitalize font-serif text-red-400"> </h1>
+        <h1 id="res2" class="mt-10 text-2xl capitalize font-serif text-red-400"> </h1>
+    </div>
+
+    
+    <script>
+        
+// 3. Numbers:
+
+
+// a. Write a JavaScript function that takes a positive integer as input and returns true if it is a prime number, otherwise returns false.
+// b. Implement the function to check if a given positive integer is a prime number.
+
+
+
+function prmeNumbe(mynumber){
+    if(mynumber<=1){
+        return `${mynumber} is  not a prime number`
+    }
+    else{
+        return `${mynumber} is a prime number`
+    }
+}
+
+let prime = prmeNumbe(2)
+console.log(prime)
+let notprime = prmeNumbe(-1)
+
+document.getElementById("res").textContent = `   ${prime }`
+document.getElementById("res2").textContent = `  ${notprime }`
+
+    </script>
+</body>
+</html>
